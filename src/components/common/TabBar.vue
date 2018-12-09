@@ -1,5 +1,5 @@
 <template>
-    <mt-tabbar v-model="selected">
+    <mt-tabbar v-model="selected"  class="is-fixed">
         <!--<mt-tab-item id="1">
             <img slot="icon" src="/static/images/tab-home.png"/>
             <span class="theme-color">首页</span>
@@ -12,7 +12,7 @@
             <img slot="icon" src="/static/images/tab-my.png"/>
             <span>我的</span>
         </mt-tab-item>-->
-        <mt-tab-item :id="tab.id" v-for="tab in tabs" :key="tab.id">
+        <mt-tab-item :id="tab.id" v-for="tab in tabs" :key="tab.id" >
             <template v-if="tab.id == $route.name">
                 <img slot="icon" :src="tab.icon_active"/>
                 <span class="theme-color">{{tab.name}}</span>
@@ -72,4 +72,7 @@
 </script>
 
 <style>
+ .is-fixed{
+    z-index: 100;
+}
 </style>

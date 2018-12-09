@@ -4,7 +4,7 @@
 
         <mt-search v-model="kwd" style="height:52px;margin-top: 40px;"></mt-search>
 
-        <div class="page-loadmore-wrapper" ref="wrapper" :style="{height: wrapperHeight + 'px' }">
+        <div class="page-loadmore-wrapper" ref="wrapper" :style="{minHeight: wrapperHeight + 'px' }">
             <mt-swipe :auto="4000" style="height: 200px;">
                 <mt-swipe-item class="slide1"><img src="https://giftshop.oss-cn-hangzhou.aliyuncs.com/goods/image/detail/20181201/15/25/1ea4282fa5b3fb9e55e24a5722e5f420.jpg" /></mt-swipe-item>
                 <mt-swipe-item class="slide1"><img src="https://giftshop.oss-cn-hangzhou.aliyuncs.com/goods/image/detail/20181201/15/26/3360835e7c2242119217b78659601c64.jpg" /></mt-swipe-item>
@@ -150,6 +150,7 @@
     }
 
     .page-loadmore-wrapper {
+       
         overflow: scroll;
     }
 
