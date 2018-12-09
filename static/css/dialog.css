@@ -1,0 +1,106 @@
+/* =======dialog====== */
+.mask {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+.dialog {
+    z-index: 5000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    max-width: 300px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dialog .dialog-title {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #404245;
+    font-size: 18px;
+    font-weight: normal;
+    overflow: hidden;
+    line-height: 24px;
+}
+
+.dialog.danger .dialog-title {
+    color: #f42b37;
+}
+
+.dialog .dialog-content {
+    position: relative;
+    width: 100%;
+    padding-bottom: 25px;
+    color: #666666;
+    font-size: 12px;
+    font-weight: bold;
+    overflow: hidden;
+    line-height: 14px;
+}
+
+.dialog .dialog-content:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    border-top: 1px solid #D5D5D6;
+    color: #D5D5D6;
+}
+
+.dialog .dialog-button {
+    position: relative;
+    width: 100%;
+    height: 44px;
+    overflow: hidden;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dialog .dialog-button .button {
+    float: left;
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 44px;
+    box-sizing: border-box;
+    color: #404245;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 44px;
+}
+
+.dialog .dialog-button .button.left {
+    font-weight: normal;
+}
+
+.dialog .dialog-button .button.right {
+    font-weight: bold;
+}
+
+.dialog .dialog-button .button.right:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-left: 1px solid #D5D5D6;
+    color: #D5D5D6;
+}

@@ -1,0 +1,5 @@
+echo -e "\n\n/*========goods-detail======*/\n" >> style.css
+
+
+
+

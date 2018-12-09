@@ -1,0 +1,11 @@
+.loading-more {
+    display: block;
+    width: 100%;
+    height: 44px;
+    box-sizing: border-box;
+    color: #666666;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 44px;
+    text-align: center;
+}
