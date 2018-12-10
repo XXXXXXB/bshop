@@ -13,9 +13,10 @@
             <mt-loadmore :bottom-method="loadBottom" :bottomAllLoaded="bottom_all_loaded" ref="loadmore">
                 <div class="home-product">
                     <div class="product-item" v-for="goods in goods_list" @click="goodsDetail(goods)">
-                        <div class="item-photo"><img :src="goods.image"></div>
-                        <div class="item-name">{{ goods.name }}</div>
-                        <div class="item-price">{{ goods.integral }}积分</div>
+                        <div class="item-photo"><img :src="goods.image" lazy="loaded"></div>
+                        <div class="item-name ellipsis">{{ goods.name }}</div>
+                        <!-- <div class="item-price">{{ goods.integral }}积分</div> -->
+                        <div class="item-price info-price" style="color:#ff410d;"><span style="font-size: large;font-weight: bold;" class="theme-color">{{goods.integral}}</span> <span>积分</span></div>
                     </div>
                 </div>
                 <div class="loading-more" style="margin-bottom: 50px;" v-if="bottom_all_loaded">

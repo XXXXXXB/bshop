@@ -13,7 +13,7 @@ import OrderList from '@/components/OrderList'
 import AddressAdd from '@/components/AddressAdd'
 import AddressList from '@/components/AddressList'
 import AddressSelect from '@/components/AddressSelect'
-
+import AddressEdit from '@/components/AddressEdit'
 
 Vue.use(Router)
 
@@ -81,7 +81,7 @@ export default new Router({
     {
       path: '/address-edit/:address_id',
       name: 'AddressEdit',
-      component: AddressAdd
+      component: AddressEdit
     },
     {
       path: '/address-list',

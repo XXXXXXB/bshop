@@ -66,6 +66,9 @@ export default {
             that.$router.push({ name: 'AddressAdd', params: { goods_id: that.goods_id }})
         }
     },
+    mounted: function () {
+
+    },    
     created : function () {
         let that = this;
         Tools.requestPost(

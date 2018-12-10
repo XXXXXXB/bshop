@@ -18,15 +18,27 @@
         <!-- Address -->
         <div class="confirm-address" @click="addressSelect">
             <template v-if="address_info.id > 0">
-                <div class="address-contact">{{address_info.name}}&nbsp;{{address_info.mobile}}</div>
-                <div class="address-detail">
-                    <!--<span><span>中国</span>河北省</span>金成大厦-->
-                    <span>{{address_info.address}}</span>
+                <div class="address">     
+                    <div>
+                        <span class="iconfont icon-ditu"></span>
+                    </div>              
+                    <div style="flex-grow:2">
+                        
+                        <div class="address-contact">{{address_info.name}}&nbsp;{{address_info.mobile}}</div>
+                        <div class="address-detail ellipsis">
+                            <!--<span><span>中国</span>河北省</span>金成大厦-->
+                            <span>{{address_info.address}}</span>
+                        </div>   
+                    </div>
+                    <div><i class="mintui mintui-back"></i></div>
                 </div>
+                
             </template>
             <template v-else>
-                <div class="address-create danger">请填写地址</div>
-                <img class="address-arrow" src="/static/image/nav-right.png"/>
+                <div class="address-create danger">
+                    <p>请填写地址</p>
+                </div>
+                <!-- <img class="address-arrow" src="/static/image/nav-right.png"/> -->
             </template>
         </div>
 
@@ -38,10 +50,10 @@
                 </div>
 
                 <div class="item-info">
-                    <div class="info-name">{{goods_info.name}}</div>
+                    <div class="info-name ellipsis">{{goods_info.name}}</div>
                     <div class="info-attr">灰色</div>
 
-                    <div class="info-price" style="color:#ff410d;">{{goods_info.integral}} <span>积分</span></div>
+                    <div class="info-price" style="color:#ff410d;"><span style="font-size: large;font-weight: bold;" class="theme-color">{{goods_info.integral}}</span> <span>积分</span></div>
                     <div class="info-amount">x{{buy_count}}</div>
                 </div>
             </div>
@@ -50,17 +62,20 @@
         <!-- Form -->
         <div class="confirm-form">
             <div class="form-item">
-                <div class="item-title">运费</div>
+                <div class="item-title">运费:</div>
                 <div class="item-value">包邮</div>
                 <!--<img class="item-arrow" src="/static/image/nav-right.png"/>-->
             </div>
             <div class="form-item">
-                <div class="item-title">留言</div>
+                <div class="item-title">留言:</div>
                 <div class="item-input">
                     <input type="text" placeholder="点击填写留言"/>
                 </div>
             </div>
-
+            <div class="form-item">
+                <div class="item-value item-count"><span>共{{buy_count}}件商品</span> <span>小计：<span style="font-size: large;font-weight: bold;" class="theme-color">{{goods_info.integral}}</span> <span  class="theme-color">积分</span></span></div>
+                
+            </div>
             <!--<div class="form-item">
                 <div class="item-title">发票类型</div>
                 <div class="item-value">不开发票</div>

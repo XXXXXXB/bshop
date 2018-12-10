@@ -19,7 +19,7 @@ import {
 } from 'mint-ui';
 import AsHeader from './components/common/Header.vue';
 import AsTabBar from './components/common/TabBar.vue';
-
+import './assets/css/iconfont.css'
 
 Vue.component(Header.name, Header);
 Vue.component(Button.name, Button);

@@ -39,7 +39,7 @@ header span{float: right;margin:0 6px;font-size: 1.4rem;color: #666}
 /*默认排序*/
 .search-order{width: 100%;height: 40px;/*display: none;*/font-size: 1.4rem}
 .search-order li{width: 25%;text-align: center;float: left;background: #fff;height: 40px;line-height: 40px}
-.search-order li a{;color: #666}
+.search-order li a{color: #666}
 .search-order-active a{color:rgba(253, 56, 93, 1)!important;}
 
 /*价格筛选*/

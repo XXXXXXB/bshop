@@ -1,7 +1,7 @@
 <template>
     <div class="main">
 
-        <as-header headtitle="地址添加"></as-header>
+        <as-header headtitle="地址编辑"></as-header>
         <!--<div class="navbar fixed-top1">
             <div class="navbar-left hide-weixin">
                 <img class="button-icon" src="image/nav-left.png">
